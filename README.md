@@ -1,1 +1,1 @@
-# dualConection
+# dual

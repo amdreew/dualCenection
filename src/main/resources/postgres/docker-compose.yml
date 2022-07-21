@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  postgresql:
+    image: postgres:12-alpine
+    restart: always
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=validadortramites
+      - POSTGRES_USER=admin_db
+      - POSTGRES_PASSWORD=admin_pass
+volumes:
+  pgdata:

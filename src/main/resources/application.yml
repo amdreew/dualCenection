@@ -1,0 +1,33 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /api/
+
+logging:
+  pattern:
+    console: "%d %-5i indelevel %logger : %msg%n"
+
+ms-config:
+  postgres:
+    username: admin_db
+    password: admin_pass
+    driver-class: org.postgresql.Driver
+    hibernate-dialect: org.hibernate.dialect.PostgreSQLDialect
+    url: jdbc:postgresql://localhost:5432/postgres?useSSL=false
+    hikari:
+      maximumPoolSize: 30
+      minimumIdle: 5
+      maxLifetime: 60000
+      autoCommit: true
+
+  mysql:
+    username: root
+    password: S3cret
+    driver-class: com.mysql.cj.jdbc.Driver
+    hibernate-dialect: org.hibernate.dialect.MySQL57Dialect
+    url: jdbc:mysql://localhost/citizix_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    hikari:
+      maximumPoolSize: 30
+      minimumIdle: 5
+      maxLifetime: 60000
+      autoCommit: true

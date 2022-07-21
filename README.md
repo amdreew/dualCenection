@@ -1,1 +1,1 @@
-# dualCenection
+# dualConection
